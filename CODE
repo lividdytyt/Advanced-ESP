@@ -56,12 +56,15 @@ Map_:GetPropertyChangedSignal("Name"):Connect(function()
         repeat
             wait()
         until game.Workspace:FindFirstChild("Map")
+
         if game.Workspace:FindFirstChild("Map") then
-            Map_ = game.Workspace.Map
+            wait(1)
+            Map_ = game.Workspace:FindFirstChild("Map")
 
             repeat
                 wait()
             until Map_:FindFirstChild("PerkMachines")
+
             repeat
                 wait()
             until Map_:FindFirstChild("Turrets")
